@@ -1,0 +1,209 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url(https://pic.i7lm.com/wp-content/uploads/2019/06/%D8%AE%D9%84%D9%81%D9%8A%D8%A7%D8%AA-%D9%84%D9%84%D9%83%D9%85%D8%A8%D9%8A%D9%88%D8%AA%D8%B1.jpg);
+        }
+        
+        .back {
+            background-color: blanchedalmond;
+            opacity: 0.4;
+            width: 300px;
+            flex-wrap: wrap;
+            text-align: center;
+            margin-top: 150px;
+            margin-left: 400px;
+            position: absolute;
+            z-index: -1;
+        }
+        
+        .container {
+            position: absolute;
+            display: grid;
+            width: 90%;
+            height: 500px;
+            margin-top: 30px;
+            font-weight: bold;
+            font-family: sans-serif;
+            background-color: transparent;
+        }
+        
+        .container .h {
+            width: 90%;
+            height: 30px;
+            margin-top: 10px;
+            margin-left: 10px;
+            background-color: white;
+            border-radius: 15px;
+            padding: 10px;
+            cursor: pointer;
+        }
+        
+        .home:hover,
+        .review:hover,
+        .top:hover {
+            color: aqua;
+        }
+        
+        .book:hover,
+        .contact:hover {
+            color: red;
+        }
+        
+        .package:hover,
+        .service:hover {
+            color: blueviolet;
+        }
+        
+        .icon .x {
+            width: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            background-color: white;
+            margin-bottom: 3px;
+            margin-left: 100px;
+            cursor: pointer;
+        }
+        
+        .x {
+            height: 2px;
+            width: 15px;
+        }
+        
+        .container {
+            transition: transform 1s ease;
+        }
+        
+        .icon:hover .container {
+            transform: translateY(-100px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="back">
+        <h2>Hello</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius, placeat delectus adipisci alias voluptatem autem quis rem ipsam perferendis consequatur fuga esse necessitatibus error laborum ut sapiente maxime non sed!</p>
+    </div>
+    <div class="icon">
+        <span class="x"></span>
+        <span class="x"></span>
+        <span class="x"></span>
+        <div class="container">
+            <span class="h home">Home</span>
+            <span class="h book">Book</span>
+            <span class="h package">Packages</span>
+            <span class="h top">Top Destination</span>
+            <span class="h service">Services</span>
+            <span class="h review">Review</span>
+            <span class="h contact">Contact</span>
+        </div>
+    </div>
+
+</body>
+
+</html>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url(https://pic.i7lm.com/wp-content/uploads/2019/06/%D8%AE%D9%84%D9%81%D9%8A%D8%A7%D8%AA-%D9%84%D9%84%D9%83%D9%85%D8%A8%D9%8A%D9%88%D8%AA%D8%B1.jpg);
+            background-repeat: none;
+            margin: 0;
+            padding: 0;
+        }
+        header ul li{
+			list-style:none;
+			margin-left:10px;
+            margin-bottom: 15px;
+            width: 90%;
+            height: 25px;
+            padding:6px 25px; 
+			border-radius:30px;
+            background: hsl(187, 100%, 68%); 
+            font-size: 2em;
+            justify-content:left;
+            align-items: center;
+            text-align: center;
+            display:flex;
+            
+		}
+        header ul li a{
+			color:#222;
+			text-decoration:none;
+		}
+        a:hover{
+            color: aliceblue;
+        }	
+        #Yaaa{
+            position: fixed;
+            top:10px;left:10px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50px;
+            border: none;
+            background: hsl(209, 59%, 48%);
+        }
+        h6 span{
+            opacity: 0;
+            width: 90%;
+            display: inline-block;
+            animation: animate 1s linear forwards;
+        }
+        @keyframes animate{
+            0%{
+                opacity: 1;
+                transform: translateX(-80%);
+                filter: blur(20px);
+                animation-delay:1s;
+            }
+            100%{
+                opacity: 1;
+                filter: blur(0px);
+            }            
+        }
+        h6{
+            display: none;
+          }
+        .Yaaa h6{
+            display:block;
+         }
+        
+        
+    </style>
+</head>
+<body id="body">
+    <header>
+         <input type="image" img src="home_ico.png" id="Yaaa" value="Hide">
+        <br>
+        <ul>
+            <h6>
+        <span><li id="Home"><a href="home.html">Home</a></li>
+        <li id="About"><a href="#">About</a></li>
+        <li id="Work"><a href="#">Work</a></li>
+        <li id="Content"><a href="#">Content</a></li></span>
+            </h6>
+        </ul>
+    </header>
+
+    <script>
+        const Yaaa=document.getElementById('Yaaa')
+        const body=document.getElementById('body')
+       
+      Yaaa.addEventListener("click", (eo) =>{
+      body.classList.toggle("Yaaa")
+      })
+      </script>
+</body>
+</html>
